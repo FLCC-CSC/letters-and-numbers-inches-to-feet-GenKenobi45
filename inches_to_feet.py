@@ -1,9 +1,8 @@
 # FILE NAME - inches_to_feet.py
 
-# NAME: Yusuf Khan 
-# DATE: 02/13/25
-# BRIEF DESCRIPTION: Program that oputputs the area of a triangle based on the height and 
-# base lengths entered by the user.
+# NAME: Yusuf Khan
+# DATE: 02/14/25
+# BRIEF DESCRIPTION: program converts inches entered by user to feet.
 
 
 
@@ -15,15 +14,20 @@
 
 
 
+
+# BEWARE! You'll need to cast not only the input from the user
+# but also maybe the number of feet
+
 ########## ENTER YER CODE BELOW THIS LINE ##########
-
-def find_area():   
-    height = float(input('Enter the height: '))
-    base = float(input('Enter the base: '))
-    area = 0.5*base*height
-    print('The area of the triangle is', area)
-find_area()
-
+    
+def convert():
+    inches = int(input('Enter the number of inches: '))
+    feet = int(inches / 12)
+    remainder = inches % 12
+    print(inches, 'inches is', feet, 'feet, and', remainder, 'inches.')
+convert()    
+    
+    
 ########### END YER CODE ABOVE THIS LINE ###########
 
 
@@ -36,21 +40,20 @@ find_area()
 
 '''
 
-Enter the height: 1
-Enter the base: 1
+Enter the number of inches: 14
 
-The area of the triangle is 0.5
-
-'''
-
+14 inches is 1 feet, and 2 inches
 
 
 '''
 
-Enter the height: 8
-Enter the base: 4
 
-The area of the triangle is 16.0
+
+'''
+
+Enter the number of inches: 100
+
+100 inches is 8 feet, and 4 inches
 
 '''
 
@@ -62,16 +65,10 @@ The area of the triangle is 16.0
 
 '''
 
-1. What is the flow of the program? Which line of code kicks off the process?
+1. What does it mean to "cast" input from the user?
 
-I feel that the second line of this code kicks off the process becasue it is the first line 
-asking for user input, and without that input the program would not be able to output a 
-correct answer.
-
-2. What was the hardest part of this lab?
-
-The hardest of the part of this lab was to remeber to use the float funtion to make 
-sure the integer can be multiplied by the text.
+to cast input from the user means to convert the input from the user to another data type 
+from the original string of data.
 
 
 
